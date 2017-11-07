@@ -11,6 +11,8 @@ class ArticlesController < ApplicationController
 
       #Защита от двойного сабмита
       redirect_to @article
+      #т.к. редиректит на /articles/:id то представление articles/create.html.erb не используется
+      #можно удалить
     else
       render action: 'new'
     end
