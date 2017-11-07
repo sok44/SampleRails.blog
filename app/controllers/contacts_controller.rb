@@ -5,7 +5,12 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    @contact.save
+    if @contact.valid?
+      @contact.save
+      #Автоматически загружается представление для данного экшена
+    else
+      render action: 'new'
+    end
   end
 
   private
