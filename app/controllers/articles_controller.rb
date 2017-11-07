@@ -8,6 +8,9 @@ class ArticlesController < ApplicationController
     if @article.valid?
       @article.save
       #Автоматически загружается представление для данного экшена
+
+      #Защита от двойного сабмита
+      redirect_to @article
     else
       render action: 'new'
     end
