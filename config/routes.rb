@@ -14,5 +14,8 @@ Rails.application.routes.draw do
   #2-ой способ экшен new теперь доступен по базавому пути /contacts/ и метод GET
   resource :contacts, only: [:new, :create], path_names: { :new => '' }
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
+  
 end
