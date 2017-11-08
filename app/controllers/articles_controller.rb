@@ -12,18 +12,33 @@ class ArticlesController < ApplicationController
   end
 
   def create
-     @article = Article.new(article_params)
-    if @article.valid?
-      @article.save
+    @article = Article.new(article_params)
+
+    if @article.save
       #Автоматически загружается представление для данного экшена
 
       #Защита от двойного сабмита
       redirect_to @article
-      #т.к. редиректит на /articles/:id то представление articles/create.html.erb не используется
-      #можно удалить
+      #т.к. редиректит на /articles/:id то представление articles/create.html.erb не используется можно удалить
     else
       render action: 'new'
     end
+  end
+
+  def edit
+    @article = Article.find(params[:id])  
+  end
+
+  def update
+    
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render action: 'edit'
+    end
+
   end
 
   private
