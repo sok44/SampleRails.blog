@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/', to: 'home#index'
   
+  get 'terms' => 'pages#terms'
+  get 'about' => 'pages#about'
   #resource :contacts, only: [:new, :create]
 
   #1-ый способ чтобы url http://localhost:3000/contacts обрабаотывал запрос GET
