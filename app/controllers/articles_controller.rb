@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
 
+  #Настройки для devise
   before_action :authenticate_user!
   
   def index
