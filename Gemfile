@@ -49,4 +49,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Для авторизации
 gem 'devise'
+
+#Для тестирования
+group :test, :development do
+  gem 'rspec-rails'
+end
