@@ -55,4 +55,5 @@ gem 'devise'
 #Для тестирования
 group :test, :development do
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
