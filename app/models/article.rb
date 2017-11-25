@@ -4,7 +4,13 @@ class Article < ApplicationRecord
   has_many :comments
 
   def subject
+    #Возвращаем title
     title
+  end
+
+  def last_comment
+    #Возвращаем последний комментарий
+    comments.last
   end
 
 end
