@@ -54,6 +54,10 @@ gem 'devise'
 
 #Для тестирования
 group :test, :development do
+  #гем для тестов
   gem 'rspec-rails'
+  #гем для матчеров
   gem 'shoulda-matchers'
+  #гем для замены Active Record в тестах
+  gem "factory_girl_rails", "~> 4.0"
 end
