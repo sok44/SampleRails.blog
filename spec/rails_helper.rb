@@ -63,3 +63,6 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+#Указываем rspec чтобы он взял настройки гема factory_girl (полный путь 'spec/support/factory_girl')
+require 'support/factory_girl'
