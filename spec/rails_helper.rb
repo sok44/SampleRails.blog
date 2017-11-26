@@ -64,5 +64,7 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-#Указываем rspec чтобы он взял настройки гема factory_girl (полный путь 'spec/support/factory_girl')
+#Указываем rspec чтобы он взял настройки гема factory_girl (полный путь 'spec/support/factory_girl.rb')
 require 'support/factory_girl'
+#Подключаем созданный файл в rspec (полный путь 'spec/support/session_helper.rb')
+require 'support/session_helper'
