@@ -51,6 +51,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Для авторизации
 gem 'devise'
+#Исправить
+#gem 'bcrypt', '~> 3.1.11', platforms: [:ruby]
 
 #Для тестирования
 group :test, :development do

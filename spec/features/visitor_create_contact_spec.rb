@@ -8,7 +8,7 @@ feature "Contact Creation" do
   scenario "allows accees to contacts page" do
     #Заходим на указанную страницу
     visit '/contacts'
-    #Ищем на этой странице в содержимом указанный текст, текст указан с помощью механизма I18n
+    #Ищем на этой странице в содержимом указанный текст, текст указан с помощью механизма I18n 'config/locales/en.yml'
     expect(page).to have_content  I18n.t 'contacts.contact_us'
   end  
 
