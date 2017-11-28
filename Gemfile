@@ -62,4 +62,6 @@ group :test, :development do
   gem 'shoulda-matchers'
   #гем для замены Active Record в тестах
   gem "factory_girl_rails", "~> 4.0"
+  #гем который очищает тестовую БД перед каждым запуском теста
+  gem 'database_cleaner'
 end
