@@ -33,7 +33,13 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
+  
+  #Изменил настройку 
+  #было
+  # config.use_transactional_fixtures = true
+  #
   config.use_transactional_fixtures = true
+
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
@@ -68,3 +74,5 @@ end
 require 'support/factory_girl'
 #Подключаем созданный файл в rspec (полный путь 'spec/support/session_helper.rb')
 require 'support/session_helper'
+#Подключаем гем для управления очисткой тестовых данных (полный путь 'spec/support/database_cleaner.rb')
+# require 'support/database_cleaner'
